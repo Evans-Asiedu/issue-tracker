@@ -53,7 +53,7 @@ const NavBar = () => {
               <DropdownMenu.Root>
                 <DropdownMenu.Trigger>
                   <Avatar
-                    src="/favicon.ico" //{session.user!.image!}
+                    src={session.user!.image!}
                     fallback="?"
                     size="2"
                     radius="full"
@@ -62,11 +62,7 @@ const NavBar = () => {
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>
                   <DropdownMenu.Label>
-                    <Text
-                      size="2" // {session.user!.email}!
-                    >
-                      evansasiedu352@gmail.com
-                    </Text>
+                    <Text size="2">{session.user!.email!}</Text>
                   </DropdownMenu.Label>
                   <DropdownMenu.Item>
                     <Link href="/api/auth/signout">Log out</Link>
